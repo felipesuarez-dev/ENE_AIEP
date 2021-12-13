@@ -1,0 +1,13 @@
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\bin\Debug\ENEAIEP.exe.config
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\bin\Debug\ENEAIEP.exe
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\bin\Debug\ENEAIEP.pdb
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.Autentificacion.resources
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.ListaRequerimientosAdmin.resources
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.ListaRequerimientosEmpleado.resources
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.Properties.Resources.resources
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.RegistroRequerimientoAdmin.resources
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.RegistroRequerimientoEmpleado.resources
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.csproj.GenerateResource.Cache
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.exe
+c:\users\felip\documents\visual studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.pdb
+C:\Users\felip\Documents\Visual Studio 2015\Projects\ENEAIEP\ENEAIEP\obj\Debug\ENEAIEP.csprojResolveAssemblyReference.cache

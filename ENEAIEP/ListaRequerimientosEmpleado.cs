@@ -43,6 +43,7 @@ namespace ENEAIEP
                     int i = cmd2.ExecuteNonQuery();
                     con.Close();
 
+
                     if (i != 0)
                     {
                         dgvListaE.Rows.RemoveAt(item.Index);
@@ -106,7 +107,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true)
@@ -117,6 +118,7 @@ namespace ENEAIEP
                         DataTable dt = new DataTable();
                         da.Fill(dt);
                         dgvListaE.DataSource = dt;
+                        con.Close();
 
                         dgvListaE.Columns[0].HeaderText = "Tipo de Requerimiento";
                         dgvListaE.Columns[1].HeaderText = "Prioridad";
@@ -124,7 +126,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
@@ -142,7 +144,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Todos Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -161,7 +163,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
@@ -178,7 +180,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -195,7 +197,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Todos Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -214,7 +216,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
@@ -231,7 +233,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -248,7 +250,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Todos Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -267,7 +269,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
@@ -284,7 +286,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -301,7 +303,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Servidores Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -320,7 +322,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
@@ -337,7 +339,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -354,7 +356,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Servidores Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -373,7 +375,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
@@ -390,7 +392,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -407,7 +409,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Servidores Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -426,7 +428,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
@@ -443,7 +445,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -460,7 +462,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Sistemas Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -479,7 +481,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
@@ -496,7 +498,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -513,7 +515,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Sistemas Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -532,7 +534,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
@@ -549,7 +551,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -566,7 +568,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Sistemas Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -585,7 +587,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
@@ -602,7 +604,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -619,7 +621,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Base de Datos Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -638,11 +640,11 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
-                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base Datos' AND prioridad = 'Baja' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Baja' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd6.ExecuteNonQuery();
                         SqlDataAdapter da = new SqlDataAdapter(cmd6);
                         DataTable dt = new DataTable();
@@ -655,7 +657,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -672,7 +674,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Base de Datos Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -691,11 +693,11 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
-                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base Datos' AND prioridad = 'Media' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Media' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd6.ExecuteNonQuery();
                         SqlDataAdapter da = new SqlDataAdapter(cmd6);
                         DataTable dt = new DataTable();
@@ -708,7 +710,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -725,7 +727,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Base de Datos Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -744,11 +746,11 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
-                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base Datos' AND prioridad = 'Alta' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Alta' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd6.ExecuteNonQuery();
                         SqlDataAdapter da = new SqlDataAdapter(cmd6);
                         DataTable dt = new DataTable();
@@ -761,7 +763,7 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -778,10 +780,11 @@ namespace ENEAIEP
                         dgvListaE.Columns[3].HeaderText = "Días Plazo";
                         dgvListaE.Columns[4].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                 }
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -806,6 +809,7 @@ namespace ENEAIEP
                     cmd2.Parameters.AddWithValue("@Index", item.Cells["tipoRequerimiento"].Value);
                     int i = cmd2.ExecuteNonQuery();
                     con.Close();
+
 
                     if (i != 0)
                     {

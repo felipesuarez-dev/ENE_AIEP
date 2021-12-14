@@ -67,7 +67,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true)
@@ -87,7 +87,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
@@ -107,7 +107,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Todos Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -128,7 +128,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
@@ -147,7 +147,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if(cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -166,7 +166,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Todos Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -187,7 +187,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
@@ -206,7 +206,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -225,7 +225,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Todos Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -246,7 +246,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
@@ -265,7 +265,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -284,7 +284,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Servidores Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -305,7 +305,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
@@ -324,7 +324,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -343,7 +343,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Servidores Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -364,7 +364,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
@@ -383,7 +383,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -402,7 +402,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Servidores Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -423,7 +423,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
@@ -442,7 +442,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -461,7 +461,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Sistemas Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -482,7 +482,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
@@ -501,7 +501,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -520,7 +520,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Sistemas Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -541,7 +541,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
@@ -560,7 +560,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -579,7 +579,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Sistemas Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -600,7 +600,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
@@ -619,7 +619,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -638,7 +638,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Base de Datos Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
@@ -659,11 +659,11 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true)
                     {
-                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base Datos' AND prioridad = 'Baja' AND estado = 'Resuelto'", con);
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Baja' AND estado = 'Resuelto'", con);
                         cmd6.ExecuteNonQuery();
                         SqlDataAdapter da = new SqlDataAdapter(cmd6);
                         DataTable dt = new DataTable();
@@ -678,7 +678,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -697,7 +697,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Base de Datos Y prioridad: Media (+pendiente, +resuelto y pendiente y resuelto)
@@ -718,11 +718,11 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true)
                     {
-                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base Datos' AND prioridad = 'Media' AND estado = 'Resuelto'", con);
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Media' AND estado = 'Resuelto'", con);
                         cmd6.ExecuteNonQuery();
                         SqlDataAdapter da = new SqlDataAdapter(cmd6);
                         DataTable dt = new DataTable();
@@ -737,7 +737,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -756,7 +756,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                     // TipoRequerimiento: Base de Datos Y prioridad: Alta (+pendiente, +resuelto y pendiente y resuelto)
@@ -777,11 +777,11 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true)
                     {
-                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base Datos' AND prioridad = 'Alta' AND estado = 'Resuelto'", con);
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Alta' AND estado = 'Resuelto'", con);
                         cmd6.ExecuteNonQuery();
                         SqlDataAdapter da = new SqlDataAdapter(cmd6);
                         DataTable dt = new DataTable();
@@ -796,7 +796,7 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
                     {
@@ -815,10 +815,11 @@ namespace ENEAIEP
                         dgvLista.Columns[5].HeaderText = "Asignado Por";
                         dgvLista.Columns[6].HeaderText = "Estado";
 
-                        con.Close();
+                        
                     }
 
                 }
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -834,18 +835,18 @@ namespace ENEAIEP
                 try
                 {
                     SqlCommand cmd2 = new SqlCommand("DELETE FROM Requerimiento WHERE tipoRequerimiento =@Index", con);
-                    cmd2.Parameters.AddWithValue("@Index", item.Cells["tipoRequerimiento"].Value);
+                    cmd2.Parameters.AddWithValue("@Index", item.Cells[0].Value);
                     int i = cmd2.ExecuteNonQuery();
                     con.Close();
 
                     if (i != 0)
                     {
                         dgvLista.Rows.RemoveAt(item.Index);
-                        MessageBox.Show("Requerimiento eliminado exitósamente", "HECHO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Requerimiento eliminado exitósamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("No se ha podido eliminar el requerimiento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("No se ha podido eliminar el requerimiento", "OK", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
@@ -855,6 +856,8 @@ namespace ENEAIEP
                 }
             }
         }
+
+        
 
         private void btnBuscarEnLista_Click(object sender, EventArgs e)
         {

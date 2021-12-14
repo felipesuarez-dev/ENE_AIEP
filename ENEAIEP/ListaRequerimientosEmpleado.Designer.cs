@@ -75,6 +75,7 @@
             this.btnMarcarResuelto.TabIndex = 63;
             this.btnMarcarResuelto.Text = "Marcar como Resuelto";
             this.btnMarcarResuelto.UseVisualStyleBackColor = false;
+            this.btnMarcarResuelto.Click += new System.EventHandler(this.btnMarcarResuelto_Click);
             // 
             // btnBuscarEnLista
             // 

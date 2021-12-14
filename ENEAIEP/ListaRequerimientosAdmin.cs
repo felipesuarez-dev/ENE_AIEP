@@ -863,12 +863,39 @@ namespace ENEAIEP
 
         private void marcarResuelto()
         {
+            foreach (DataGridViewRow item in this.dgvLista.SelectedRows)
+            {
+                con.Open();
+                try
+                {
+                    SqlCommand cmd2 = new SqlCommand("UPDATE Requerimiento set estado = @Resuelto WHERE tipoRequerimiento =@Index", con);
+                    cmd2.Parameters.AddWithValue("@Resuelto", "Resuelto");
+                    cmd2.Parameters.AddWithValue("@Index", item.Cells["tipoRequerimiento"].Value);
+                    int i = cmd2.ExecuteNonQuery();
+                    con.Close();
+
+                    if (i != 0)
+                    {
+                        dgvLista.Rows.RemoveAt(item.Index);
+                        MessageBox.Show("Requerimiento marcado como Resuelto", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha podido marcar el Requerimiento como Resuelto :(", "OK", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("SQL no EJECUTADO", "ERROR SQL" + ex.Message);
+
+                }
+            }
 
         }
 
         private void btnMarcarResuelto_Click(object sender, EventArgs e)
         {
-
+            marcarResuelto();
         }
     }
 }

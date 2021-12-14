@@ -464,6 +464,65 @@ namespace ENEAIEP
                         
                     }
 
+                    // TipoRequerimiento: Servidores Y prioridad: Todos (+pendiente, +resuelto y pendiente y resuelto)
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbPendientes.Checked == true)
+                    {
+                        SqlCommand cmd5 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Pendiente'", con);
+                        cmd5.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd5);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true)
+                    {
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Resuelto'", con);
+                        cmd6.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd6);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Servidores" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    {
+                        SqlCommand cmd4 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto'", con);
+                        cmd4.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd4);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+
                     // TipoRequerimiento: Sistemas Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbPendientes.Checked == true)
                     {
@@ -641,6 +700,65 @@ namespace ENEAIEP
                         
                     }
 
+                    // TipoRequerimiento: Sistemas Y prioridad: Todos (+pendiente, +resuelto y pendiente y resuelto)
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbPendientes.Checked == true)
+                    {
+                        SqlCommand cmd5 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Pendiente'", con);
+                        cmd5.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd5);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true)
+                    {
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Resuelto'", con);
+                        cmd6.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd6);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Sistemas" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    {
+                        SqlCommand cmd4 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto'", con);
+                        cmd4.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd4);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+
                     // TipoRequerimiento: Base de Datos Y prioridad: Baja (+pendiente, +resuelto y pendiente y resuelto)
                     else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Baja" & chbPendientes.Checked == true)
                     {
@@ -816,6 +934,65 @@ namespace ENEAIEP
                         dgvLista.Columns[6].HeaderText = "Estado";
 
                         
+                    }
+
+                    // TipoRequerimiento: Servidores Y prioridad: Todos (+pendiente, +resuelto y pendiente y resuelto)
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbPendientes.Checked == true)
+                    {
+                        SqlCommand cmd5 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Pendiente'", con);
+                        cmd5.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd5);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true)
+                    {
+                        SqlCommand cmd6 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Resuelto'", con);
+                        cmd6.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd6);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
+                    }
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    {
+                        SqlCommand cmd4 = new SqlCommand("SELECT tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto'", con);
+                        cmd4.ExecuteNonQuery();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd4);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        dgvLista.DataSource = dt;
+
+                        dgvLista.Columns[0].HeaderText = "Tipo de Requerimiento";
+                        dgvLista.Columns[1].HeaderText = "Prioridad";
+                        dgvLista.Columns[2].HeaderText = "Descripción";
+                        dgvLista.Columns[3].HeaderText = "Días Plazo";
+                        dgvLista.Columns[4].HeaderText = "Asignado A";
+                        dgvLista.Columns[5].HeaderText = "Asignado Por";
+                        dgvLista.Columns[6].HeaderText = "Estado";
+
+
                     }
 
                 }

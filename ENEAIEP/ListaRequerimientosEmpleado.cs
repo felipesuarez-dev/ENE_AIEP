@@ -1013,9 +1013,9 @@ namespace ENEAIEP
                 {
                     SqlCommand cmd2 = new SqlCommand("UPDATE Requerimiento set estado = @Resuelto WHERE idRequerimiento =@Index", con);
                     cmd2.Parameters.AddWithValue("@Resuelto", "Resuelto");
-                    cmd2.Parameters.AddWithValue("@Index", item.Cells[0]);
+                    cmd2.Parameters.AddWithValue("@Index", item.Cells["idRequerimiento"].Value);
                     int i = cmd2.ExecuteNonQuery();
-                    con.Close();
+                    
 
 
                     if (i != 0)

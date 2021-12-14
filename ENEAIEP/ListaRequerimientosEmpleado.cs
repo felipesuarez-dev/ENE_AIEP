@@ -131,14 +131,16 @@ namespace ENEAIEP
 
                     }
 
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & (chbPendientes.Checked == true & chbResueltos.Checked == true))
                     {
                         SqlCommand cmd5 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
+                        con.Open();
                         cmd5.ExecuteNonQuery();
                         SqlDataAdapter da = new SqlDataAdapter(cmd5);
                         DataTable dt = new DataTable();
                         da.Fill(dt);
                         dgvListaE.DataSource = dt;
+                        con.Close();
 
                         dgvListaE.Columns[0].HeaderText = "ID";
                         dgvListaE.Columns[1].HeaderText = "Tipo de Requerimiento";
@@ -187,7 +189,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE prioridad = 'Baja' AND estado = 'Pendiente' AND estado = 'Resuelto'AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -243,7 +245,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM WHERE prioridad = 'Media' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -299,7 +301,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Todos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE prioridad = 'Alta' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -355,7 +357,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Servidores' AND prioridad = 'Baja' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -411,7 +413,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Servidores' AND prioridad = 'Media' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -467,7 +469,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Servidores' AND prioridad = 'Alta' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -523,7 +525,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Servidores" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -579,7 +581,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Sistemas' AND prioridad = 'Baja' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -635,7 +637,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Sistemas' AND prioridad = 'Media' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -691,7 +693,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Sistemas' AND prioridad = 'Alta' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -747,7 +749,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Sistemas" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -803,7 +805,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Baja" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Baja' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -859,7 +861,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Media" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Media' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -915,7 +917,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Alta" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE tipoRequerimiento = 'Base de Datos' AND prioridad = 'Alta' AND estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();
@@ -971,7 +973,7 @@ namespace ENEAIEP
 
 
                     }
-                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbResueltos.Checked == true & chbResueltos.Checked == true)
+                    else if (cmbTipoRequerimientoListaE.SelectedItem.ToString() == "Base de Datos" & cmbPrioridadListaE.SelectedItem.ToString() == "Todos" & chbPendientes.Checked == true & chbResueltos.Checked == true)
                     {
                         SqlCommand cmd4 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto' AND (asignado_a = '" + txtUsuAct.Text + "' OR asignado_por = '" + txtUsuAct.Text + "')", con);
                         cmd4.ExecuteNonQuery();

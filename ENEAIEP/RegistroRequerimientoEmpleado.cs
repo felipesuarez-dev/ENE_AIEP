@@ -55,6 +55,7 @@ namespace ENEAIEP
 
         private void btnGuardarRegistroE_Click(object sender, EventArgs e)
         {
+            //Validación de Campos del Registro Requerimiento
             if (string.IsNullOrEmpty(cmbTipoRequerimiento.Text))
             {
                 MessageBox.Show("Debes ingresar un tipo de requerimiento");
@@ -73,6 +74,7 @@ namespace ENEAIEP
             }
             else
             {
+                //Capturar el número de días de realización del requerimiento según la prioridad, para añadirlo como dato a la base de datos
                 string ndias = cmbPrioridad.Text;
                 if (cmbPrioridad.SelectedItem.ToString() == "Alta")
                 {
@@ -92,12 +94,13 @@ namespace ENEAIEP
                     txtDiasPlazo.Text = ndias;
                 }
 
+                //Inicio de inserción de los campos llenados en la base de datos
                 con.Open();
                 string cadena = "INSERT INTO Requerimiento ([tipoRequerimiento], [asignado_a], [asignado_por], [descripcionRequerimiento], [prioridad], [estado], [diasPlazo]) VALUES ('" + cmbTipoRequerimiento.Text + "','" + cmbAsignado.Text + "','" + txtAsignadoPorE.Text + "','" + txtDescripcionRequerimiento.Text + "','" + cmbPrioridad.Text + "','" + txtEstado.Text + "', '"+txtDiasPlazo.Text+"')";
                 SqlCommand cmd = new SqlCommand(cadena, con);
                 cmd.ExecuteNonQuery();
 
-
+                //Mensaje de confirmación del registro, mostrando el número de días para resolver el Requerimiento
                 if (cmbPrioridad.SelectedItem.ToString() == "Alta")
                 {
                     MessageBox.Show("El requerimiento fue ingresado, el plazo para resolverlo es de 3 días");

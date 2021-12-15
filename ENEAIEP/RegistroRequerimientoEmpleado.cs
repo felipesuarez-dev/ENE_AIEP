@@ -24,8 +24,6 @@ namespace ENEAIEP
             txtAsignadoPorE.Text = nombre + " " + apellido;
             lblMensajeEmpleado.Text = "Bienvenido " + nombre;
             cargarEmpleados();
-            cargarTipoRequerimientos();
-            cargarPrioridad();
         }
 
         public void cargarEmpleados()
@@ -40,34 +38,6 @@ namespace ENEAIEP
             con.Close();
         }
 
-        //Método para cargar los tipos de requerimientos en el combobox desde la base de datos
-        public void cargarTipoRequerimientos()
-        {
-            con.Open();
-            SqlCommand comando = new SqlCommand("select distinct(tipoRequerimiento) from Requerimiento", con);
-            SqlDataReader dr8 = comando.ExecuteReader();
-            while (dr8.Read())
-            {
-                cmbTipoRequerimiento.Items.Add(dr8[0].ToString());
-
-            }
-            con.Close();
-        }
-
-        //Método para cargar en el combobox la prioridad desde la base de datos
-        public void cargarPrioridad()
-        {
-            con.Open();
-            SqlCommand coma = new SqlCommand("select distinct(prioridad) from Requerimiento", con);
-            SqlDataReader dtrd = coma.ExecuteReader();
-            while (dtrd.Read())
-            {
-                cmbPrioridad.Items.Add(dtrd[0].ToString());
-            }
-            con.Close();
-        }
-
-        //Botón para ir al formulario Listar Requerimientos, que es donde se ven 
         private void btnIrListaRequerimientosE_Click(object sender, EventArgs e)
         {
             ListaRequerimientosEmpleado lre = new ListaRequerimientosEmpleado();
@@ -75,7 +45,6 @@ namespace ENEAIEP
             lre.Show();
         }
 
-        //Botón con método para limpiar los distintos campos del registro
         private void btnLimpiarCamposRegistro_Click(object sender, EventArgs e)
         {
             this.cmbTipoRequerimiento.SelectedItem = null;

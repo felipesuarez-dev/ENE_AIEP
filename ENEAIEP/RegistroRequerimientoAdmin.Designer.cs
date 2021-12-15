@@ -147,6 +147,10 @@
             this.cmbPrioridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPrioridad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPrioridad.FormattingEnabled = true;
+            this.cmbPrioridad.Items.AddRange(new object[] {
+            "Alta",
+            "Media",
+            "Baja"});
             this.cmbPrioridad.Location = new System.Drawing.Point(194, 328);
             this.cmbPrioridad.Name = "cmbPrioridad";
             this.cmbPrioridad.Size = new System.Drawing.Size(233, 24);
@@ -167,6 +171,10 @@
             this.cmbTipoRequerimiento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoRequerimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoRequerimiento.FormattingEnabled = true;
+            this.cmbTipoRequerimiento.Items.AddRange(new object[] {
+            "Base de Datos",
+            "Sistemas",
+            "Servidores"});
             this.cmbTipoRequerimiento.Location = new System.Drawing.Point(194, 73);
             this.cmbTipoRequerimiento.Name = "cmbTipoRequerimiento";
             this.cmbTipoRequerimiento.Size = new System.Drawing.Size(233, 24);

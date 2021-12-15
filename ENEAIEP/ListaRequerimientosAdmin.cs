@@ -19,43 +19,9 @@ namespace ENEAIEP
         public ListaRequerimientosAdmin()
         {
             InitializeComponent();
-            cargarTipoRequerimientos();
-            cargarPrioridad();
           
         }
 
-        //Método para cargar los tipos de requerimientos en el combobox desde la base de datos
-        public void cargarTipoRequerimientos()
-        {
-            con.Open();
-            SqlCommand comando = new SqlCommand("select distinct(tipoRequerimiento) from Requerimiento", con);
-            SqlDataReader dr8 = comando.ExecuteReader();
-            while (dr8.Read())
-            {
-                cmbTipoRequerimientoLista.Items.Add(dr8[0].ToString());
-                
-            }
-
-            cmbTipoRequerimientoLista.Items.Add("Todos");
-            con.Close();
-        }
-
-        //Método para cargar en el combobox la prioridad desde la base de datos
-        public void cargarPrioridad()
-        {
-            con.Open();
-            SqlCommand coma = new SqlCommand("select distinct(prioridad) from Requerimiento", con);
-            SqlDataReader dtrd = coma.ExecuteReader();
-            while (dtrd.Read())
-            {
-                cmbPrioridadLista.Items.Add(dtrd[0].ToString());
-            }
-            cmbPrioridadLista.Items.Add("Todos");
-            con.Close();
-        }
-
-        //Método para mostrar en el DataGridView los elementos que se seleccionen de los combobox y checkbox.
-        //Primero se validan los campos y luego se crean las opciones a elegir entre las variables que existen en los combobox y con la opcion elegida de los checkbox
         private void mostrarRequerimientos()
         {
             try
@@ -126,7 +92,7 @@ namespace ENEAIEP
 
                     }
 
-                    else if ((cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Todos") & (chbPendientes.Checked == true & chbResueltos.Checked == true))
+                    else if (cmbTipoRequerimientoLista.SelectedItem.ToString() == "Todos" & cmbPrioridadLista.SelectedItem.ToString() == "Todos" & (chbPendientes.Checked == true & chbResueltos.Checked == true))
                     {
                         SqlCommand cmd5 = new SqlCommand("SELECT idRequerimiento, tipoRequerimiento, prioridad, descripcionRequerimiento, diasPlazo, asignado_a, asignado_por, estado FROM Requerimiento WHERE estado = 'Pendiente' AND estado = 'Resuelto'", con);
                         cmd5.ExecuteNonQuery();
@@ -1086,8 +1052,6 @@ namespace ENEAIEP
             }
         }
 
-
-        //Boton con el método para eliminar registro del DataGridView
         private void btnEliminarDeLista_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow item in this.dgvLista.SelectedRows)
@@ -1103,7 +1067,7 @@ namespace ENEAIEP
                     if (i != 0)
                     {
                         dgvLista.Rows.RemoveAt(item.Index);
-                        MessageBox.Show("Requerimiento eliminado exitosamente", "HECHO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Requerimiento eliminado exitósamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -1120,14 +1084,11 @@ namespace ENEAIEP
 
         
 
-        //Botón que contiene el método que mostrará los distintos requerimientos que estan en la base de datos
         private void btnBuscarEnLista_Click(object sender, EventArgs e)
         {
             mostrarRequerimientos();
         }
 
-
-        //Método que permite al usuario cambiar el estado de los requerimientos de Pendiente a Resuelto
         private void marcarResuelto()
         {
             foreach (DataGridViewRow item in this.dgvLista.SelectedRows)

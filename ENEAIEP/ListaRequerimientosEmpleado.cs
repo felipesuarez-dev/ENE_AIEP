@@ -18,40 +18,9 @@ namespace ENEAIEP
         public ListaRequerimientosEmpleado()
         {
             InitializeComponent();
-            cargarTipoRequerimientos();
-            cargarPrioridad();
                         
         }
 
-        //Método para cargar los tipos de requerimientos en el combobox desde la base de datos
-        public void cargarTipoRequerimientos()
-        {
-            con.Open();
-            SqlCommand comando1 = new SqlCommand("select distinct(tipoRequerimiento) from Requerimiento", con);
-            SqlDataReader dr9 = comando1.ExecuteReader();
-            while (dr9.Read())
-            {
-                cmbTipoRequerimientoListaE.Items.Add(dr9[0].ToString());
-            }
-            cmbTipoRequerimientoListaE.Items.Add("Todos");
-            con.Close();
-        }
-
-        //Método para cargar en el combobox la prioridad desde la base de datos
-        public void cargarPrioridad()
-        {
-            con.Open();
-            SqlCommand coman = new SqlCommand("select distinct(prioridad) from Requerimiento", con);
-            SqlDataReader dtrdd = coman.ExecuteReader();
-            while (dtrdd.Read())
-            {
-                cmbPrioridadListaE.Items.Add(dtrdd[0].ToString());
-            }
-            cmbPrioridadListaE.Items.Add("Todos");
-            con.Close();
-        }
-
-        //Botón que contiene el método que mostrará los distintos requerimientos que estan en la base de datos
         private void btnBuscarEnLista_Click(object sender, EventArgs e)
         {
             mostrarRequerimiento();
@@ -62,7 +31,6 @@ namespace ENEAIEP
             
         }
 
-        //Botón con método para eliminar registro del DataGridView 
         private void btnEliminarDeLista_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow item in this.dgvListaE.SelectedRows)
@@ -79,7 +47,7 @@ namespace ENEAIEP
                     if (i != 0)
                     {
                         dgvListaE.Rows.RemoveAt(item.Index);
-                        MessageBox.Show("Requerimiento eliminado exitosamente", "HECHO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Requerimiento eliminado exitósamente", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -96,8 +64,6 @@ namespace ENEAIEP
             
         }
 
-        //Método para mostrar en el DataGridView los elementos que se seleccionen de los combobox y checkbox.
-        //Primero se validan los campos y luego se crean las opciones a elegir entre las variables que existen en los combobox y con la opcion elegida de los checkbox
         public void mostrarRequerimiento()
         {
             try
@@ -1035,13 +1001,11 @@ namespace ENEAIEP
             }
         }
 
-        //Botón que contiene el método marcar resuelto, que permite cambiar el estado de Pendiente a Resuelto
         private void btnMarcarResuelto_Click(object sender, EventArgs e)
         {
             marcarResuelto();
         }
 
-        //Método que permite al usuario cambiar el estado de los requerimientos de Pendiente a Resuelto
         private void marcarResuelto()
         {
             foreach (DataGridViewRow item in this.dgvListaE.SelectedRows)

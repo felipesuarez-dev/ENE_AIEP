@@ -24,6 +24,8 @@ namespace ENEAIEP
             txtAsignadoPor.Text = nombre + " " + apellido;
             lblMensajeAdmin.Text = "Bienvenido " + nombre;
             cargarEmpleados();
+            cargarTipoRequerimientos();
+            cargarPrioridad();
         }
 
         public void cargarEmpleados()
@@ -34,6 +36,33 @@ namespace ENEAIEP
             while (dr.Read())
             {
                 cmbAsignado.Items.Add(dr[0].ToString()+" "+dr[1].ToString());
+            }
+            con.Close();
+        }
+
+        //Método para cargar los tipos de requerimientos en el combobox desde la base de datos
+        public void cargarTipoRequerimientos()
+        {
+            con.Open();
+            SqlCommand comando = new SqlCommand("select distinct(tipoRequerimiento) from Requerimiento", con);
+            SqlDataReader dr8 = comando.ExecuteReader();
+            while (dr8.Read())
+            {
+                cmbTipoRequerimiento.Items.Add(dr8[0].ToString());
+
+            }
+            con.Close();
+        }
+
+        //Método para cargar en el combobox la prioridad desde la base de datos
+        public void cargarPrioridad()
+        {
+            con.Open();
+            SqlCommand coma = new SqlCommand("select distinct(prioridad) from Requerimiento", con);
+            SqlDataReader dtrd = coma.ExecuteReader();
+            while (dtrd.Read())
+            {
+                cmbPrioridad.Items.Add(dtrd[0].ToString());
             }
             con.Close();
         }
